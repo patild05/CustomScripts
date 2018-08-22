@@ -64,11 +64,7 @@
             "type": "string",
             "defaultValue": "CoreInfraVNet",
             "allowedValues": [
-                "CoreInfraVNet",
-                "NW-TSEEnterprise-vnet-def",
-                "NW-TSEPCNL-vnet-def",
-                "NW-TSEPCUK-vnet-def",
-                "NW-Sandbox-vnet-def"
+                "CoreInfraVNet"
             ],
             "metadata": {
                 "description": "VNET Name"
@@ -112,8 +108,8 @@
         "vmNameConvention":"[concat('vm',parameters('vmName'))]",
         "domainJoinOptions": "3",
         "vnetID": "[concat('vnetID',parameters('VirtualNetworkName'))]",
-        "vnetIDNW-TSEEnterprise-vnet-def": {
-            "subnetID": "/subscriptions/b6c72194-a2d4-49a2-9317-9f42d823cec6/resourceGroups/CoreInfra/providers/Microsoft.Network/virtualNetworks/CoreInfraVNet/subnets/default"
+        "vnetIDNW-vnet-def": {
+            "subnetID": "/subscriptions/bxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/CoreInfra/providers/Microsoft.Network/virtualNetworks/CoreInfraVNet/subnets/default"
         }
     },
     "resources": [
@@ -129,7 +125,7 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[variables('vnetIDNW-TSEEnterprise-vnet-def').subnetID]"
+                                "id": "[variables('vnetIDNW-vnet-def').subnetID]"
                             }
                         }
                     }
