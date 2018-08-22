@@ -1,6 +1,6 @@
 ﻿# Obviously, replace the following with your own values
-$subscriptionId = "b6c72194-a2d4-49a2-9317-9f42d823cec6"
-$tenantId = "033a7408-6de4-42db-920e-57ae321da0e5"
+$subscriptionId = "bxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$tenantId = "0xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 $password = ConvertTo-SecureString -String "Password@123" -AsPlainText -Force
 Write-Output $password
 
